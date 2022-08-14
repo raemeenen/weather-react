@@ -1,10 +1,9 @@
-import React from "react";
 import axios from "axios";
 
 export default function Weather() {
 
   function handleResponse(response) {
-    alert (`The weather in Kansas City is ${response.data.main.temp}°C`)
+    alert (`The weather in Kansas City is ${response.data.main.temp}°F`)
   }
 
   let apiKey = "3fd0b2514fdddeb5a1773faa623df844";
