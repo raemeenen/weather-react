@@ -1,13 +1,29 @@
-import axios from "axios";
+import React from "react";
+import "./Weather.css";
+import Search from "./Search";
+import Date from "./Date";
+import Temperature from "./Temperature";
+import Conditions from "./Conditions";
 
 export default function Weather() {
-
-  function handleResponse(response) {
-    alert (`The weather in Kansas City is ${response.data.main.temp}°F`)
-  }
-
-  let apiKey = "3fd0b2514fdddeb5a1773faa623df844";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Kansas City&units=imperial&appid=${apiKey}`;
-
-  axios.get(apiUrl).then(handleResponse);
+  let weatherData = {
+    city: "Kansas City"
+  };
+  return (
+    <div className="Weather">
+      <Search />
+      <div className="row">
+        <h1 className="current-city">{weatherData.city}</h1>
+        <Date />
+      </div>
+      <div className="row current-weather">
+        <div className="col">
+          <Temperature />
+        </div>
+        <div className="col">
+          <Conditions />
+        </div>
+      </div>
+    </div>
+  );
 }

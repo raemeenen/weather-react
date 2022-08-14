@@ -1,0 +1,11 @@
+.Search .enter-city {
+  display: block;
+  margin: 10px 0px;
+  text-align: center;
+}
+
+.Search .enter-city-input {
+  padding: 4px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}

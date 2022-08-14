@@ -1,0 +1,7 @@
+.Conditions {
+  font-size: 20px;
+}
+
+.Conditions .description:first-letter {
+  text-transform: capitalize;
+}
